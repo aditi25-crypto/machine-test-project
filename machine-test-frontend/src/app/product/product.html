@@ -1,0 +1,44 @@
+<div class="container">
+
+  <h2>Product Master</h2>
+
+  <div class="form-group">
+    <input [(ngModel)]="name" placeholder="Product Name" />
+
+    <select [(ngModel)]="categoryId">
+      <option [ngValue]="null">Select Category</option>
+      <option *ngFor="let c of categories" [ngValue]="c.CategoryId">
+        {{ c.CategoryName }}
+      </option>
+    </select>
+
+    <button (click)="addProduct()">Add Product</button>
+  </div>
+
+  <hr>
+
+  <h3>Product List</h3>
+
+  <table>
+    <tr>
+      <th>Product ID</th>
+      <th>Product Name</th>
+      <th>Category ID</th>
+      <th>Category Name</th>
+    </tr>
+
+    <tr *ngFor="let p of products">
+      <td>{{ p.ProductId }}</td>
+      <td>{{ p.ProductName }}</td>
+      <td>{{ p.CategoryId }}</td>
+      <td>{{ p.CategoryName }}</td>
+    </tr>
+  </table>
+
+  <div class="pagination">
+    <button (click)="prevPage()">Previous</button>
+    <span> Page {{ page }} </span>
+    <button (click)="nextPage()">Next</button>
+  </div>
+
+</div>

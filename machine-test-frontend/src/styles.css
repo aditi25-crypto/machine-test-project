@@ -1,0 +1,7 @@
+/* Global page background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #f8fbff, #e8f5e9);
+  min-height: 100vh;
+}

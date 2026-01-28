@@ -1,0 +1,17 @@
+<div class="container">
+
+  <h2>Category Master</h2>
+
+  <div class="form-group">
+    <input [(ngModel)]="name" placeholder="Enter category name" />
+    <button (click)="addCategory()">Add Category</button>
+  </div>
+
+  <ul class="category-list">
+    <li *ngFor="let c of categories">
+      <span>{{ c.CategoryName }}</span>
+      <button class="delete-btn" (click)="deleteCategory(c.CategoryId)">Delete</button>
+    </li>
+  </ul>
+
+</div>
